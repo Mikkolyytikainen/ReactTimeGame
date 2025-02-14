@@ -45,6 +45,12 @@ class _GameScreenState extends State<GameScreen> {
         _isGameStarted = false;
         _message = 'Your reaction time is $reactionTime ms';
       });
+    } else {
+      _timer.cancel();
+      setState(() {
+        _isGameStarted = false;
+        _message = 'You tapped too early!';
+      });
     }
   }
 
