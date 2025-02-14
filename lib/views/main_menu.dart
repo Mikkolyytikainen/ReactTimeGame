@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:reacttime/views/game.dart';
 
 class MainMenu extends StatelessWidget {
   const MainMenu({super.key});
@@ -15,7 +16,10 @@ class MainMenu extends StatelessWidget {
           children: <Widget>[
             ElevatedButton(
               onPressed: () {
-                Navigator.pushNamed(context, '/game');
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const GameScreen()),
+                );
               },
               child: const Text('Start Game'),
             ),
