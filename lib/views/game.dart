@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class MainMenu extends StatelessWidget {
-  const MainMenu({super.key});
+class Game extends StatelessWidget {
+  const Game({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Main Menu'),
+        title: const Text('Game'),
       ),
       body: Center(
         child: Column(
@@ -15,9 +15,9 @@ class MainMenu extends StatelessWidget {
           children: <Widget>[
             ElevatedButton(
               onPressed: () {
-                Navigator.pushNamed(context, '/game');
+                Navigator.pop(context);
               },
-              child: const Text('Start Game'),
+              child: const Text('Back to Main Menu'),
             ),
           ],
         ),
