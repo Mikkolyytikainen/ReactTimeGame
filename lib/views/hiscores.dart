@@ -7,19 +7,6 @@ import 'package:flutter/material.dart';
 class Hiscores extends StatelessWidget {
   const Hiscores({Key? key}) : super(key: key);
 
-  // This widget shows the high scores of the user
-  // It retrieves the scores from shared preferences and displays them in a list
-  // It also provides a button to clear the high scores
-  // and navigate back to the main menu
-  // The scores are displayed in a simple list view
-  // with a title and a button to clear the scores
-  // The button is styled with a blue color and white text
-  // The list view is wrapped in a container with padding and a background color
-  // The title is displayed in a text widget with a larger font size and bold weight
-  // The button is displayed below the list view with a margin
-  // The button is centered and has a fixed width and height
-  // The button is styled with a blue color and white text
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
