@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:reacttime/views/game.dart';
 import 'package:reacttime/views/main_menu.dart';
+import 'package:reacttime/views/hiscores.dart';
 import 'package:reacttime/views/about.dart';
-import 'package:reacttime/views/settings.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,8 +23,8 @@ class MyApp extends StatelessWidget {
       routes: {
         '/main_menu': (context) => const MainMenu(),
         '/game': (context) => const GameScreen(),
-        '/about': (context) => const About(),
-        '/settings': (context) => const Settings(),
+        '/about': (context) => const Hiscores(),
+        '/settings': (context) => const About(),
       },
     );
   }

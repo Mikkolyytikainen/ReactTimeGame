@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:reacttime/views/about.dart';
+import 'package:reacttime/views/hiscores.dart';
 import 'package:reacttime/views/game.dart';
-import 'package:reacttime/views/settings.dart';
+import 'package:reacttime/views/about.dart';
 
 class MainMenu extends StatelessWidget {
   const MainMenu({super.key});
@@ -43,10 +43,10 @@ class MainMenu extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const About()),
+                  MaterialPageRoute(builder: (context) => const Hiscores()),
                 );
               },
-              child: const Text('Settings'),
+              child: const Text('High Scores'),
               style: ElevatedButton.styleFrom(
                 padding:
                     const EdgeInsets.symmetric(horizontal: 30, vertical: 15),

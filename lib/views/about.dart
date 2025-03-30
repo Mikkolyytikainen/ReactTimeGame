@@ -3,7 +3,7 @@ import 'package:reacttime/views/game.dart';
 import 'package:reacttime/views/main_menu.dart';
 
 class About extends StatelessWidget {
-  const About({Key? key}) : super(key: key);
+  const About({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,6 +27,12 @@ class About extends StatelessWidget {
             const SizedBox(height: 20),
             const Text(
               'Yksinkertainen Flutter-peli, joka mittaa reaktioaikaa.',
+              style: TextStyle(
+                fontSize: 18,
+              ),
+            ),
+            const Text(
+              'Peli tallentaa parhaat tulokset ja näyttää ne käyttäjälle.',
               style: TextStyle(
                 fontSize: 18,
               ),

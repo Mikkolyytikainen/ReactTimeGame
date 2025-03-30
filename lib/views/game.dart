@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class GameScreen extends StatefulWidget {
   const GameScreen({super.key});
@@ -44,6 +45,8 @@ class _GameScreenState extends State<GameScreen> {
       setState(() {
         _isGameStarted = false;
         _message = 'Your reaction time is $reactionTime ms';
+        // Save the highscore
+        _saveHighScore(reactionTime);
       });
     } else {
       _timer.cancel();
@@ -52,6 +55,17 @@ class _GameScreenState extends State<GameScreen> {
         _message = 'You tapped too early!';
       });
     }
+  }
+
+  Future<void> _saveHighScore(int score) async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    List<String>? highScores = prefs.getStringList('highScores') ?? [];
+
+    highScores.add(score.toString());
+    if (highScores.length > 5) {
+      highScores.removeAt(0); // Remove the oldest score if more than 5
+    }
+    await prefs.setStringList('highScores', highScores);
   }
 
   @override
